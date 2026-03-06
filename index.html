@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البوابة الذكية - Smart Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="user-section" id="userSection">
+            <button class="login-btn" onclick="toggleLogin()">تسجيل الدخول</button>
+        </div>
+        <div class="top-links">
+            <a href="#"><i class="fas fa-envelope"></i> البريد</a>
+            <a href="#"><i class="fas fa-th"></i> الخدمات</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="hero">
+            <h1>مرحباً بك في عالمك الرقمي</h1>
+            <p>ابحث عن أي شيء في الويب</p>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="mainInput" placeholder="ماذا تريد أن تعرف اليوم؟">
+            <button id="execSearch"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card" onclick="openService('Maps')">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>الخرائط</span>
+            </div>
+            <div class="service-card" onclick="openService('News')">
+                <i class="fas fa-newspaper"></i>
+                <span>الأخبار</span>
+            </div>
+            <div class="service-card" onclick="openService('Translate')">
+                <i class="fas fa-language"></i>
+                <span>الترجمة</span>
+            </div>
+            <div class="service-card" onclick="openService('Drive')">
+                <i class="fas fa-cloud"></i>
+                <span>الملفات</span>
+            </div>
+        </div>
+        <div class="user-section" id="userSection">
+    <button class="login-btn" onclick="showLoginModal()">تسجيل الدخول</button>
+</div>
+
+<div id="loginModal" class="modal-overlay" style="display:none;">
+    <div class="login-card">
+        <h2>تسجيل الدخول</h2>
+        <input type="text" id="username" placeholder="اسم المستخدم">
+        <input type="password" id="password" placeholder="كلمة السر">
+        <button onclick="loginUser()">دخول</button>
+        <button onclick="closeLogin()" class="close-btn">إلغاء</button>
+    </div>
+</div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
